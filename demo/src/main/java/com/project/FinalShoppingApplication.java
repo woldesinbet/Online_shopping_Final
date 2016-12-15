@@ -9,6 +9,6 @@ public class FinalShoppingApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FinalShoppingApplication.class, args);
 		
-		//simple comment for commit test
+		
 	}
 }
