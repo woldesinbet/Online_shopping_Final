@@ -13,6 +13,7 @@ public class Orders {
 	@Id
 	@GeneratedValue
 	private long id;
+	@OneToOne
 	private ShoppingCart shoppingcart;
 	private Date deliveryDate;
 	private double totalorderprice;
@@ -22,8 +23,7 @@ public class Orders {
 	private Address adress;
 	@OneToMany
 	private List<Orderline> lineitems;
-	@OneToOne
-	
+
 	public ShoppingCart getShoppingcart() {
 		return shoppingcart;
 	}

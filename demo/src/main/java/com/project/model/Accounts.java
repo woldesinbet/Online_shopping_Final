@@ -16,7 +16,16 @@ public class Accounts {
 	private long id;
 	private String username;
 	private String password;
+
 	
+
+	
+	public Customer getUser() {
+		return user;
+	}
+	public void setUser(Customer user) {
+		this.user = user;
+	}
 	@OneToOne
 	private Paymentinfo payment;
 	@OneToMany
