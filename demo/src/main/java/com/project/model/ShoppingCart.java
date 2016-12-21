@@ -3,7 +3,9 @@ package com.project.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -14,8 +16,8 @@ public class ShoppingCart {
 	@GeneratedValue
 	private long id;
 	private int quantity;
-	private Date dateCreated;
-	@OneToMany
+	private Date dateCreated = new Date();
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Product> holdsproducts;
 	public List<Product> getHoldsproducts() {
 		return holdsproducts;
@@ -35,12 +37,12 @@ public class ShoppingCart {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public Date getDateCreated() {
+	/*public Date getDateCreated() {
 		return dateCreated;
 	}
 	public void setDateCreated(Date dateCreated) {
 		this.dateCreated = dateCreated;
-	}
+	}*/
 	
 
 }

@@ -10,28 +10,33 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<form:form modelAttribute="newCategory" method="post"
+<form:form modelAttribute="newCheckout" method="post"
 		enctype="multipart/form-data">
 		<table>
-
-			<tr>
-				<td>Category Name:</td>
+		<tr>
+				<td>Card No:</td>
+				<td><form:input id="cardNo" name="cardNo" path="cardNo" type="text" /></td>
+				<td><form:errors path="cardNo" cssStyle="color:red;" /></td>
+		</tr>
+		<tr>
+				<td>Name appear in Card:</td>
 				<td><form:input id="name" name="name" path="name" type="text" /></td>
 				<td><form:errors path="name" cssStyle="color:red;" /></td>
-			</tr>
-
-
-			<tr>
-				<td>Description:</td>
-				<td><form:textarea id="description" path="description" /></td>
-				<td><form:errors path="description" cssStyle="color:red;" /></td>
-			</tr>
-
-			<tr>
-				<td><input type="submit" value="Add" /></td>
-			</tr>
+		</tr>
+		<tr>
+				<td>Expiration Date:</td>
+				<td><form:input id="expirationdate" name="expirationdate" path="expirationdate" type="text" /></td>
+				<td><form:errors path="expirationdate" cssStyle="color:red;" /></td>
+		</tr>
+		<tr>
+				<td>CCV No:</td>
+				<td><form:input id="ccv" name="ccv" path="ccv" type="text" /></td>
+				<td><form:errors path="ccv" cssStyle="color:red;" /></td>
+		</tr>
 		</table>
-	</form:form>
+		<input type="submit" value="Submit">
+		
+</form:form>
+
 </body>
 </html>

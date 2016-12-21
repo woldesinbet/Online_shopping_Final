@@ -11,6 +11,9 @@ public class HomeController {
 	public String Front1(){
 		return "HomePage";
 	}
-
+	@RequestMapping("/aboutUs")
+	public String aboutUs(){
+		return "about";
+	}
 
 }
